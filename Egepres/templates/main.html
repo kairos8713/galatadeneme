@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <script src="https://kit.fontawesome.com/030af201e4.js" crossorigin="anonymous"></script>
+    <title>Buca Galata Çaycısı</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script></head>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icon.jpg')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+</head>
+<body>
+    <div id="header">
+        <div id="hcon">
+            <ul id="cb">
+                <li class="cbitem" id="tel"><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+                <li class="cbitem" id="eposta"><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+                <a href="https://www.instagram.com/bucagalatacaycisi" target="_blank"><li class="cbitem" id="insta"><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="https://www.google.com/search?q=galata+%C3%A7ayc%C4%B1s%C4%B1&sca_esv=7479081811d2e948&cs=1&hl=tr&tbm=lcl&sxsrf=ACQVn0-Ws-WU-E3eXCxQxkGWELZp79-5aA%3A1710264912599&ei=UJLwZYOVJM2I4-EPgcqV8AQ&udm=&oq=Galata+%C3%87ayc%C4%B1s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIg9HYWxhdGEgw4dheWPEsXMqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLwSUIoHWMoIcAF4AJABAJgBoQGgAc0DqgEDMC4zuAEDyAEA-AEBmAIEoALkA8ICBhAAGBYYHpgDAIgGAZIHAzEuM6AH0ww&sclient=gws-wiz-local#rlfi=hd:;si:6466744243758707753,l,ChFnYWxhdGEgw6dheWPEsXPEsUjMnKf8hquAgAhaGxAAEAEYABgBIhFnYWxhdGEgw6dheWPEsXPEsZIBBGNhZmWqATkQATIeEAEiGt154UQK2FsTHx9z5VfYzqeg6U_JruKzGBRoMhUQAiIRZ2FsYXRhIMOnYXljxLFzxLE,y,Oe7RKi9p5uY;mv:[[38.469871999999995,27.1844859],[38.2474528,27.1100452]]" target="_blank"><li class="cbitem" id="facebook"><i class="fa-brands fa-google"></i></li></a>
+            </ul>
+        </div>
+        <div id="nav">
+            <a href="/" id="icon"><img id="iimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+            <ul id="navul">
+                <a href="/hakkımızda"><li class="navitem">Hakkımızda</li></a>
+                <a href="/menü"><li class="navitem">Menü</li></a>
+                <a href="/iletişim"><li class="navitem">İletişim</li></a>
+            </ul>
+        </div>
+        <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+        <a href="/" id="ricon"><img id="riimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+    </div>
+
+    <div id="lsd" class="">
+        <a href="#" id="xham"><i class="fa-solid fa-x"></i></a>
+        <ul id="lsul">
+            <a href="/hakkımızda"><li>Hakkımızda</li></a>
+            <a href="/menü"><li>Menü</li></a>
+            <a href="/iletişim"><li>İletişim</li></a>
+        </ul>
+        <ul id="lsul1">
+            <li><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+            <li><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+            <a href="https://www.instagram.com/bucagalatacaycisi"><li><i class="fa-brands fa-instagram"></i></li></a>
+            <a href=""><li><i class="fa-brands fa-google"></i></li></a>
+        </ul>
+    </div>
+    <div class="slider">  
+        <div class="kodlayiruk-slider">
+            <div class="slide fade">
+               <img src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" class="slide-image" />
+               <div class="text">İlk Görsel</div>
+            </div>
+       
+            <div class="slide fade">
+               <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="slide-image" />
+               <div class="text">İkinci Görsel</div>
+            </div>
+       
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="slide-image" />
+                <div class="text">Başlık</div>
+            </div>
+            <a class="prev" onclick="slideRoute(-1)">&#10094;</a>
+            <a class="next" onclick="slideRoute(1)">&#10095;</a>
+        </div>
+        <br/>
+        </div>
+        <div id="blog"  style="background-image: url({{url_for('static', filename='galata.png')}})">
+            <h2>Hakkımızda</h2>
+            <h1 id="tw" class="geç">Galata Çaycısı Bir İzmir Efsanesidir.</h1>
+            <p>Buca Galata Çaycısı, 2014'den bu yana aralıksız olarak aynı konumda ve aynı kalitede size hizmet vermeye devam etmektedir. Buca Galata Çaycısı, 2024 itibariyle kendi içerisinde bir sürü barındıran bir İzmir Efsanesidir.  </p>
+            <a href=""><i class="fa-solid fa-arrow-right"></i> Devam Et</a>
+        </div>
+        <div style="overflow: hidden;">
+            <div id="ürünler" class="g1">
+                <div id="a1" class="aitem"><i class="fa-solid fa-drumstick-bite"></i><p>yemeklerimiz</p></div>
+                <div id="a2" class="aitem"><i class="fa-solid fa-mug-hot"></i><p>yemeklerimiz</p></div>
+                <div id="a3" class="aitem"><i class="fa-solid fa-cloud"></i><p>yemeklerimiz</p></div>
+                <div id="a4" class="aitem"><i class="fa-solid fa-vr-cardboard"></i><p>yemeklerimiz</p></div>
+                <div id="a5" class="aitem"><i class="fa-solid fa-8"></i><p>yemeklerimiz</p></div>
+                <div id="a6" class="aitem"><i class="fa-brands fa-playstation"></i><p>yemeklerimiz</p></div>
+            </div>
+        </div>
+
+    <div id="footer">
+        <div id="fcdiv">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.2648176289026!2d27.165955700000005!3d38.3891256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd8ac2252900f%3A0x59be7da09e8a3429!2zR2FsYXRhIMOHYXljxLFzxLE!5e0!3m2!1str!2str!4v1709938039959!5m2!1str!2str" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <ul id="ful">
+                <li class="fcitem"><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+                <li class="fcitem" id="eposta"><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+                <a href="https://www.instagram.com/bucagalatacaycisi" target="_blank"><li class="fcitem" id="finsta"><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="https://www.google.com/search?q=galata+%C3%A7ayc%C4%B1s%C4%B1&sca_esv=7479081811d2e948&cs=1&hl=tr&tbm=lcl&sxsrf=ACQVn0-Ws-WU-E3eXCxQxkGWELZp79-5aA%3A1710264912599&ei=UJLwZYOVJM2I4-EPgcqV8AQ&udm=&oq=Galata+%C3%87ayc%C4%B1s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIg9HYWxhdGEgw4dheWPEsXMqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLwSUIoHWMoIcAF4AJABAJgBoQGgAc0DqgEDMC4zuAEDyAEA-AEBmAIEoALkA8ICBhAAGBYYHpgDAIgGAZIHAzEuM6AH0ww&sclient=gws-wiz-local#rlfi=hd:;si:6466744243758707753,l,ChFnYWxhdGEgw6dheWPEsXPEsUjMnKf8hquAgAhaGxAAEAEYABgBIhFnYWxhdGEgw6dheWPEsXPEsZIBBGNhZmWqATkQATIeEAEiGt154UQK2FsTHx9z5VfYzqeg6U_JruKzGBRoMhUQAiIRZ2FsYXRhIMOnYXljxLFzxLE,y,Oe7RKi9p5uY;mv:[[38.469871999999995,27.1844859],[38.2474528,27.1100452]]" target="_blank"><li class="fcitem" id="ffacebook"><i class="fa-brands fa-google"></i></li></a>
+            </ul>
+        </div>
+        <div id="fnav">
+            <ul>
+                <a href=""><li class="fnitem">Ana Sayfa</li></a>
+                <a href=""><li class="fnitem">Hakkımızda</li></a>
+                <a href=""><li class="fnitem">Menü</li></a>
+                <a href=""><li class="fnitem">İletişim</li></a>
+            </ul>
+        </div>
+        <p id="copp" >&#169; Copyright Buca Galata Çaycısı 2024 Bütün Hakları Saklıdır</p>
+        <a id="emre" href="https://www.emreercan.org">Kodlama ve Tasarım: Emre Ercan</a>
+    </div>
+</body>
+<script>
+window.addEventListener("scroll",function(){
+        let value = window.scrollY;
+        console.log(value)
+        if (value > 470){
+            $("#blog").addClass("typewriter")
+            $("#tw").removeClass("geç")
+        }})
+
+$(".option").click(function(){
+   $(".option").removeClass("active");
+   $(this).addClass("active");
+   
+});
+
+$("#hamburger").click(function(){
+    $("#lsd").css("visibility","visible")
+    $("#lsd").addClass("sag").removeClass("sol")
+})
+$("#xham").click(function(){
+    $("#lsd").addClass("sol").removeClass("sag")
+})
+
+$("#a1").mouseover(function(){
+  $("#ürünler").addClass("g1").removeClass("g2").removeClass("g3").removeClass("g4").removeClass("g5")
+})
+$("#a2").mouseover(function(){
+  $("#ürünler").addClass("g2").removeClass("g1").removeClass("g3").removeClass("g4").removeClass("g5")
+})
+$("#a3").mouseover(function(){
+  $("#ürünler").addClass("g3").removeClass("g2").removeClass("g1").removeClass("g4").removeClass("g5")
+})
+$("#a4").mouseover(function(){
+  $("#ürünler").addClass("g4").removeClass("g2").removeClass("g3").removeClass("g1").removeClass("g5")
+})
+$("#a5").mouseover(function(){
+  $("#ürünler").addClass("g5").removeClass("g2").removeClass("g3").removeClass("g4").removeClass("g1")
+})
+        let slideIndex = 2;
+    slideShow(slideIndex);
+
+    function slideRoute(n) {
+        slideShow(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        slideShow(slideIndex = n);
+    }
+
+    function slideShow(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display="none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+
+        dots[slideIndex-1].className +=" active";
+    }
+
+</script>
+</html>

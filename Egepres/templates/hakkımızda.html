@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <script src="https://kit.fontawesome.com/030af201e4.js" crossorigin="anonymous"></script>
+    <title>EgePress</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script></head>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icon.jpg')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+</head>
+<body>
+    <div id="header">
+        <div id="hcon">
+            <ul id="cb">
+                <li class="cbitem" id="tel"><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+                <li class="cbitem" id="eposta"><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+                <a href="https://www.instagram.com/bucagalatacaycisi" target="_blank"><li class="cbitem" id="insta"><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="https://www.google.com/search?q=galata+%C3%A7ayc%C4%B1s%C4%B1&sca_esv=7479081811d2e948&cs=1&hl=tr&tbm=lcl&sxsrf=ACQVn0-Ws-WU-E3eXCxQxkGWELZp79-5aA%3A1710264912599&ei=UJLwZYOVJM2I4-EPgcqV8AQ&udm=&oq=Galata+%C3%87ayc%C4%B1s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIg9HYWxhdGEgw4dheWPEsXMqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLwSUIoHWMoIcAF4AJABAJgBoQGgAc0DqgEDMC4zuAEDyAEA-AEBmAIEoALkA8ICBhAAGBYYHpgDAIgGAZIHAzEuM6AH0ww&sclient=gws-wiz-local#rlfi=hd:;si:6466744243758707753,l,ChFnYWxhdGEgw6dheWPEsXPEsUjMnKf8hquAgAhaGxAAEAEYABgBIhFnYWxhdGEgw6dheWPEsXPEsZIBBGNhZmWqATkQATIeEAEiGt154UQK2FsTHx9z5VfYzqeg6U_JruKzGBRoMhUQAiIRZ2FsYXRhIMOnYXljxLFzxLE,y,Oe7RKi9p5uY;mv:[[38.469871999999995,27.1844859],[38.2474528,27.1100452]]" target="_blank"><li class="cbitem" id="facebook"><i class="fa-brands fa-google"></i></li></a>
+            </ul>
+        </div>
+        <div id="nav">
+            <a href="/" id="icon"><img id="iimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+            <ul id="navul">
+                <a href="/hakkımızda"><li class="navitem">Hakkımızda</li></a>
+                <a href="/menü"><li class="navitem">Menü</li></a>
+                <a href="/iletişim"><li class="navitem">İletişim</li></a>
+            </ul>
+        </div>
+        <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+        <a href="/" id="ricon"><img id="riimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+    </div>
+
+    <div id="lsd" class="">
+        <a href="#" id="xham"><i class="fa-solid fa-x"></i></a>
+        <ul id="lsul">
+            <a href="/hakkımızda"><li>Hakkımızda</li></a>
+            <a href="/menü"><li>Menü</li></a>
+            <a href="/iletişim"><li>İletişim</li></a>
+        </ul>
+        <ul id="lsul1">
+            <li><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+            <li><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+            <a href="https://www.instagram.com/bucagalatacaycisi"><li><i class="fa-brands fa-instagram"></i></li></a>
+            <a href=""><li><i class="fa-brands fa-google"></i></li></a>
+        </ul>
+    </div>
+
+
+
+
+<script>
+    $("#hamburger").click(function(){
+        $("#lsd").css("visibility","visible")
+        $("#lsd").addClass("sag").removeClass("sol")
+    })
+    $("#xham").click(function(){
+        $("#lsd").addClass("sol").removeClass("sag")
+    })
+    
+    </script>

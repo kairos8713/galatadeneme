@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <script src="https://kit.fontawesome.com/030af201e4.js" crossorigin="anonymous"></script>
+    <title>EgePress</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script></head>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icon.jpg')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+</head>
+<body>
+    <div id="header">
+        <div id="hcon">
+            <ul id="cb">
+                <li class="cbitem" id="tel"><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+                <li class="cbitem" id="eposta"><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+                <a href="https://www.instagram.com/bucagalatacaycisi" target="_blank"><li class="cbitem" id="insta"><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="https://www.google.com/search?q=galata+%C3%A7ayc%C4%B1s%C4%B1&sca_esv=7479081811d2e948&cs=1&hl=tr&tbm=lcl&sxsrf=ACQVn0-Ws-WU-E3eXCxQxkGWELZp79-5aA%3A1710264912599&ei=UJLwZYOVJM2I4-EPgcqV8AQ&udm=&oq=Galata+%C3%87ayc%C4%B1s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIg9HYWxhdGEgw4dheWPEsXMqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLwSUIoHWMoIcAF4AJABAJgBoQGgAc0DqgEDMC4zuAEDyAEA-AEBmAIEoALkA8ICBhAAGBYYHpgDAIgGAZIHAzEuM6AH0ww&sclient=gws-wiz-local#rlfi=hd:;si:6466744243758707753,l,ChFnYWxhdGEgw6dheWPEsXPEsUjMnKf8hquAgAhaGxAAEAEYABgBIhFnYWxhdGEgw6dheWPEsXPEsZIBBGNhZmWqATkQATIeEAEiGt154UQK2FsTHx9z5VfYzqeg6U_JruKzGBRoMhUQAiIRZ2FsYXRhIMOnYXljxLFzxLE,y,Oe7RKi9p5uY;mv:[[38.469871999999995,27.1844859],[38.2474528,27.1100452]]" target="_blank"><li class="cbitem" id="facebook"><i class="fa-brands fa-google"></i></li></a>
+            </ul>
+        </div>
+        <div id="nav">
+            <a href="/" id="icon"><img id="iimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+            <ul id="navul">
+                <a href="/hakkımızda"><li class="navitem">Hakkımızda</li></a>
+                <a href="/menü"><li class="navitem">Menü</li></a>
+                <a href="/iletişim"><li class="navitem">İletişim</li></a>
+            </ul>
+        </div>
+        <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+        <a href="/" id="ricon"><img id="riimg" src="{{url_for('static', filename='icon.png')}}" alt=""></a>
+    </div>
+
+    <div id="lsd" class="">
+        <a href="#" id="xham"><i class="fa-solid fa-x"></i></a>
+        <ul id="lsul">
+            <a href="/hakkımızda"><li>Hakkımızda</li></a>
+            <a href="/menü"><li>Menü</li></a>
+            <a href="/iletişim"><li>İletişim</li></a>
+        </ul>
+        <ul id="lsul1">
+            <li><i class="fa-solid fa-phone"></i> +90 543 987 65 43</li>
+            <li><i class="fa-solid fa-envelope"></i> info@bucagalatacaycisi.com</li>
+            <a href="https://www.instagram.com/bucagalatacaycisi"><li><i class="fa-brands fa-instagram"></i></li></a>
+            <a href=""><li><i class="fa-brands fa-google"></i></li></a>
+        </ul>
+    </div>
+
+<div id="acontainer">
+<form action="/add" method = "post">
+    <div class="form-group">
+            <label style="margin: 1%; font-size: 150%;">Ürün Ekle</label><br>
+            <select name="tables" id="cars">
+                <option value="Kahvaltı">Kahvaltı Menüsü</option>
+                <option value="Aparatif">Aparatif Menüsü</option>
+                <option value="Hamburger">Hamburger Menüsü</option>
+                <option value="Pizza">Pizza Menüsü</option>
+                <option value="Makarna">Makarna Menüsü</option>
+                <option value="Salata">Salata Menüsü</option>
+                <option value="Yemek">Ana Yemek Menüsü</option>
+                <option value="Tatlı">Tatlı Menüsü</option>
+                <option value="Sıcak İçecek">Sıcak İçecek Menüsü</option>
+                <option value="Sıcak Kahve">Sıcak Kahve Menüsü</option>
+                <option value="Soğuk İçecek">Soğuk İçecek Menüsü</option>
+                <option value="Soğuk Kahve">Soğuk Kahve Menüsü</option>
+                <option value="Meşrubat">Meşrubat Menüsü</option>
+                <option value="Nargile">Nargile Menüsü</option>
+              </select>
+            <input type="text" class="form-control" name = "isim" placeholder="Ürün İsimi Giriniz...">
+            <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Ekle</button><br>
+            <input type="text" class="form-control" name = "resim" placeholder="Ürün Resmini Giriniz...">
+    <hr>
+</form>
+<h1>Kahvaltı menüsü</h1>
+{% if kahvaltı == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in kahvaltı %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/kahvaltı/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/kahvaltı/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+
+<h1>Aparatif menüsü</h1>
+{% if apara == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in apara %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/aparatif/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/aparatif/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Hamburger menüsü</h1>
+{% if hamb == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in hamb %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/hamburger/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/hamburger/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Pizza menüsü</h1>
+{% if pizz == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in pizz %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/pizza/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/pizza/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Makarna menüsü</h1>
+{% if maka == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in maka %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/makarna/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/makarna/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Salata menüsü</h1>
+{% if sala == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in sala %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/salata/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/salata/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Ana Yemek menüsü</h1>
+{% if yeme == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in yeme %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/yemek/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/yemek/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Sıcak İçecek menüsü</h1>
+{% if sıiç == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in sıiç %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/sıcak_içecek/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/sıcak_içecek/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Sıcak Kahve menüsü</h1>
+{% if sıka == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in sıka %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/sıcak_kahve/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/sıcak_kahve/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Soğuk İçecek menüsü</h1>
+{% if soiç == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in soiç %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/soğuk_içecek/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/soğuk_içecek/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Soğuk Kahve menüsü</h1>
+{% if soka == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in soka %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/soğuk_kahve/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/soğuk_kahve/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Meşrubat menüsü</h1>
+{% if meşr == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in meşr %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/meşrubat/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/meşrubat/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+<h1>Nargile menüsü</h1>
+{% if narg == [] %}
+<div class="alert alert-warning" role="alert">
+    Herhangi bir ürününüz bulunmuyor...
+</div>
+{% else %}
+      {% for ürün in narg %}
+    <div class="üliste">
+      <ul class="liste">
+            <li class="li1">{{ürün.isim}}</li>
+            <li class="li1">{{ürün.fiyat}}</li>
+            <li class="limg"><img src= "{{url_for('static', filename=ürün.resim)}}"></li>
+            <a class="btn li1" href="/delete">Sil</a>
+            <form action="/change/nargile/{{ürün.id}}" method = "post">
+                        <label style="margin: 1%; font-size: 150%;">Fiyat Değiştir</label>
+                        <input type="text" class="form-control" name = "fiyat" placeholder="Ürün Fiyatı Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+            <form action="/changer/nargile/{{ürün.id}}" method = "post">
+                <label style="margin: 1%; font-size: 150%;">Resim Değiştir</label>
+                <input type="text" class="form-control" name = "Resim" placeholder="Ürün Resimi Giriniz..."><button type = "submit" class="btn">Değiştir</button>
+            </form>
+      </ul>
+    </div>  
+      {% endfor %}
+{% endif %}
+
+</div>
